@@ -2,19 +2,7 @@
 
 ## Scope and result
 
-The published evidence supports displaying the specific Crystal Picnic gameplay image and Valyria Tear title-screen image selected here, subject to the conditions implemented below. This is a source-based permission assessment, not a legal opinion or a blanket clearance for every screenshot, a port, a reimplementation, or story reuse. No fair-use exception is needed for this implementation.
-
-## Crystal Picnic — permitted under the developer’s artwork grant
-
-Primary evidence:
-
-- [Trent Gamblin / Nooskewl crowdfunding announcement](https://www.indiegogo.com/es/projects/trentgamblin/crystal-picnic-open-source-action-rpg): expressly includes graphics among the assets available for commercial and noncommercial reuse.
-- [Developer’s OpenGameArt announcement and licensing explanation](https://opengameart.org/node/29800): gives the artwork permission’s terms and confirms the game data became available on October 24, 2014.
-- [Archived Nooskewl repository license](https://raw.githubusercontent.com/Cloudxtreme/crystal-picnic/master/LICENSE.txt): copyright 2015 Nooskewl, zlib license; preserved locally as a supporting notice. This mirror corroborates the release, but the artwork conclusion relies on the creator’s own statements rather than assuming the code license covers all graphics.
-
-Selected image: developer-published Steam screenshot `ss_377def4c93d2805faf3019f4d43cdc8fc4232af8`, obtained from the original Steam app 415890’s public appdetails API. Shows the kitchen, not a community member’s overlay or artwork. Original JPEG pixels were converted to lossless WebP without cropping, content changes, or watermark removal.
-
-Implementation: credit Nooskewl; link original listing, license notice, and developer permission. The title and character names identify the original game. The image is explicitly labeled “Original game”; the page does not claim Nooskewl’s work as a Goza Games release or imply endorsement. The creator’s naming restriction on new creations is not treated as permission to publish a derivative game under the original title.
+The published evidence supports displaying the specific Valyria Tear title-screen image selected here, subject to the conditions implemented below. This is a source-based permission assessment, not a legal opinion or a blanket clearance for every screenshot, a port, a reimplementation, or story reuse. No fair-use exception is needed for this implementation.
 
 ## Valyria Tear — selected title screen permitted with GPL conditions
 
