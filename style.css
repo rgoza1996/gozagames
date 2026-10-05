@@ -43,3 +43,9 @@
 .project-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
 .project-card{min-width:0}
 @media(max-width:760px){.project-grid{grid-template-columns:minmax(0,1fr)}}
+
+.storm-card{grid-template-columns:1fr 1fr;align-items:center}
+.storm-card .project-preview{margin:0}
+.storm-card p{margin-top:20px}
+.project-card .preview-credit{font-size:.7rem;line-height:1.6;margin:0 0 20px}
+@media(max-width:760px){.storm-card{grid-template-columns:minmax(0,1fr)}}
