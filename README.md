@@ -13,3 +13,10 @@ GitHub Pages serves the `main` branch from the repository root.
 - Shared site theme: `style.css`
 
 The Android application source and private game/mod development repositories are maintained separately and are not published by this website.
+
+## Project previews
+
+Released project cards use optimized WebP screenshots in `assets/screenshots/`. Each preview links to its full image and includes descriptive alt text.
+
+- Sudoku gameplay and home screen: existing Android store-listing screenshots.
+- Nobles Buy Stuff mod options: author screenshot from [the Nexus Mods image gallery](https://www.nexusmods.com/mountandblade2bannerlord/mods/12366?tab=images), originally `12366-1785891251-639886525.png`.

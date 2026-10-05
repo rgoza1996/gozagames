@@ -28,3 +28,18 @@
 .wide-card h3{font-size:2.4rem;margin-bottom:0}
 .wide-card p{margin:0}
 @media(max-width:760px){.portfolio-heading{display:block}.project-grid,.wide-card{grid-template-columns:1fr}.project-card{min-height:280px}.wide-card{gap:18px}.portfolio-section{padding:46px 0 54px}.studio-page .header-nav{flex-wrap:wrap;justify-content:flex-start}}
+
+/* Compact screenshot previews for released projects. */
+.project-preview{margin:0 0 24px}
+.preview-images{display:flex;align-items:center;justify-content:center;gap:16px;height:260px;padding:12px;border:1px solid var(--border);border-radius:9px;background:var(--highlight)}
+.preview-images a{display:block;min-width:0;max-width:100%;height:100%;border-radius:5px}
+.preview-images img{display:block;width:100%;height:100%;object-fit:contain;border-radius:5px}
+.preview-phones a{aspect-ratio:9/16;border:1px solid var(--border);box-shadow:0 5px 14px #241E1910;overflow:hidden}
+.preview-landscape{padding:0;background:#191713;overflow:hidden}
+.preview-landscape a{width:100%;display:flex;align-items:center}
+.project-preview figcaption{display:flex;flex-wrap:wrap;justify-content:space-between;gap:4px 12px;margin-top:8px;font-size:.7rem;color:var(--secondary)}
+.project-preview figcaption span{color:var(--accent)}
+@media(max-width:420px){.preview-images{height:220px;gap:10px;padding:10px}.preview-landscape{padding:0}.project-preview figcaption{font-size:.65rem}}
+.project-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+.project-card{min-width:0}
+@media(max-width:760px){.project-grid{grid-template-columns:minmax(0,1fr)}}
