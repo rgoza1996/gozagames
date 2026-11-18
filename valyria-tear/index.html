@@ -1,0 +1,211 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="text-scale" content="scale">
+  <meta name="color-scheme" content="light dark">
+  <script>try{const s=localStorage.getItem("color-scheme");if(s==="light"||s==="dark")document.querySelector("meta[name=\"color-scheme\"]").content=s;}catch{}</script>
+  <meta name="theme-color" media="(prefers-color-scheme: light)" content="#FCF9F2">
+  <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#151310">
+  <meta name="referrer" content="strict-origin-when-cross-origin">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'inline-speculation-rules' 'sha256-ZV62QEBcRpEGfPKCC1icWMtMogYELaRWrcXrfesczKY=' 'sha256-uQWPMl/AmgV/dy/u7p3gQcznuxxWwOHFk34Nd/Wx88U='; style-src 'self' 'unsafe-inline'; img-src 'self' data:; object-src 'none'; base-uri 'self'; form-action 'self'">
+  <meta name="description" content="Valyria Tear runtime preservation research at Goza Games: evaluating a modern Godot reimplementation alongside per-asset GPL and license audits.">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Valyria Tear Exploration | Goza Games">
+  <meta property="og:description" content="Evaluating an open-source Godot reimplementation of Valyria Tear for modern web and Android targets, with transparent license review.">
+  <meta property="og:url" content="https://rgoza1996.github.io/gozagames/valyria-tear/">
+  <meta property="og:image" content="https://rgoza1996.github.io/gozagames/assets/screenshots/valyria-title.webp">
+  <link rel="canonical" href="https://rgoza1996.github.io/gozagames/valyria-tear/">
+  <link rel="icon" href="../favicon.svg" type="image/svg+xml">
+  <title>Valyria Tear Exploration | Goza Games</title>
+  <link rel="stylesheet" href="../style.css">
+  <script type="speculationrules">{"prefetch":[{"where":{"and":[{"href_matches":"/*"},{"not":{"href_matches":"/*assets/*"}}]},"eagerness":"moderate"}]}</script>
+  <script type="module" src="../site.js"></script>
+</head>
+<body class="studio-page">
+<a id="skip-to-main" class="skip-link visually-hidden" href="#project-title">Skip to content</a>
+
+<header class="site-header">
+  <div class="wrap header-inner">
+    <a id="vt-home-wordmark" class="wordmark" href="../">
+      <span class="brand-mark" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></span>
+      Goza Games
+    </a>
+    <div class="header-controls">
+      <nav class="header-nav" aria-label="Primary" data-scrollspy>
+        <a id="vt-nav-scope" href="#scope">Scope</a>
+        <a id="vt-nav-licensing" href="#licensing">Licensing &amp; source</a>
+        <a id="vt-nav-credits" href="../screenshot-credits/#valyria-tear">Screenshot credits</a>
+        <a id="vt-nav-all-games" href="../">All games</a>
+      </nav>
+      <button id="vt-theme-toggle" class="theme-toggle" type="button" data-theme-toggle>
+        <span class="when-light">
+          <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"/></svg>
+          <span>Dark<span class="visually-hidden"> theme</span></span>
+        </span>
+        <span class="when-dark">
+          <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2m-7.07-14.93 1.41 1.41m11.32 11.32 1.41 1.41M2 12h2m16 0h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"/></svg>
+          <span>Light<span class="visually-hidden"> theme</span></span>
+        </span>
+      </button>
+    </div>
+  </div>
+</header>
+
+<main id="main" class="wrap">
+  <nav class="breadcrumb" aria-label="Breadcrumbs">
+    <ol>
+      <li><a id="bc-interactive" href="../../">Goza Interactive</a></li>
+      <li><a id="bc-games" href="../">Goza Games</a></li>
+      <li><a id="bc-current" href="./" aria-current="page">Valyria Tear</a></li>
+    </ol>
+  </nav>
+
+  <section class="project-hero" aria-labelledby="project-title">
+    <span class="eyebrow">Goza Games · Research &amp; Preservation</span>
+    <h1 id="project-title" tabindex="-1">Valyria Tear</h1>
+    <p class="hero-description">An open-source runtime preservation study evaluating a modern Godot reimplementation alongside web and Android targets. Permission and per-asset license verification are conducted upfront before any public build is distributed.</p>
+    <div class="actions">
+      <a id="cta-vt-credits" class="button" href="../screenshot-credits/#valyria-tear">GPL 2.0 credits &amp; source archive</a>
+      <a id="cta-vt-upstream" class="button secondary" href="https://github.com/ValyriaTear/ValyriaTear/tree/0.6.0" rel="noopener">Upstream source (0.6.0)</a>
+    </div>
+  </section>
+
+  <dl class="project-facts" aria-label="Exploration details">
+    <div>
+      <dt>Original creators</dt>
+      <dd>Bertram, JAP, Len &amp; Allacrost</dd>
+    </div>
+    <div>
+      <dt>Preview license</dt>
+      <dd>GNU GPL v2.0</dd>
+    </div>
+    <div>
+      <dt>Target runtimes</dt>
+      <dd>Godot · Web &amp; Android</dd>
+    </div>
+    <div>
+      <dt>Current phase</dt>
+      <dd>Permission &amp; asset audit</dd>
+    </div>
+  </dl>
+
+  <section class="portfolio-section" aria-labelledby="preview-title">
+    <div class="portfolio-heading">
+      <div>
+        <span class="eyebrow">Reference capture</span>
+        <h2 id="preview-title">Original 0.6.0 title scene.</h2>
+      </div>
+      <p class="section-summary">Shown for preservation context; no endorsement by or affiliation with the upstream creators is implied.</p>
+    </div>
+
+    <div class="showcase-stage">
+      <figure class="project-preview">
+        <div class="preview-images preview-landscape">
+          <button id="open-vt-shot" class="preview-trigger" type="button" commandfor="lightbox-valyria" command="show-modal" aria-label="Enlarge original Valyria Tear title screen screenshot">
+            <img
+              src="../assets/screenshots/valyria-title.webp"
+              alt="Original Valyria Tear title screen with mountain scenery and a floating crystal"
+              width="800"
+              height="600"
+              fetchpriority="high"
+              decoding="async">
+            <span class="zoom-chip" aria-hidden="true">Enlarge</span>
+          </button>
+        </div>
+        <figcaption>© Bertram, JAP, Len &amp; Allacrost · Distributed under GNU GPL v2 <span>Select screenshot to inspect</span></figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <section id="scope" class="portfolio-section" aria-labelledby="scope-title" tabindex="-1">
+    <div class="portfolio-heading">
+      <div>
+        <span class="eyebrow">Exploration scope</span>
+        <h2 id="scope-title">Technical &amp; licensing review.</h2>
+      </div>
+    </div>
+
+    <div class="prose-grid">
+      <div class="prose-block">
+        <h3>Modern runtime evaluation</h3>
+        <p>Older C++ / Lua 2D RPG engines often grow harder to build and package as desktop toolchains, audio stacks, and mobile platforms move forward. This exploration tests how cleanly map data, battle logic, and UI flows translate to a maintainable Godot runtime capable of targeting desktop, web, and Android.</p>
+      </div>
+
+      <div class="prose-block">
+        <h3>Scene-by-scene asset diligence</h3>
+        <p>Open-source games frequently combine code and artwork governed by several distinct licenses across chapters, tilesets, music, and fonts. While the 0.6.0 title-screen preview shown above is verified under GNU GPL v2, downstream gameplay scenes carry mixed licenses that require explicit verification and permission checks before any playable port is released.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="licensing" class="portfolio-section" aria-labelledby="licensing-title" tabindex="-1">
+    <div class="portfolio-heading">
+      <div>
+        <span class="eyebrow">References &amp; archives</span>
+        <h2 id="licensing-title">Source materials &amp; attribution.</h2>
+      </div>
+    </div>
+
+    <div class="channel-grid">
+      <a id="channel-vt-credits" class="channel-card" href="../screenshot-credits/#valyria-tear">
+        <div>
+          <span class="project-type">Local archive</span>
+          <div class="channel-title">GPL 2.0 Notices &amp; Title-Scene Archive</div>
+          <p class="channel-meta">Download the original PNG capture, GNU GPL v2 text, asset license manifests, and complete title-scene source bundle.</p>
+        </div>
+        <span class="channel-cta">View credits &amp; source files →</span>
+      </a>
+
+      <a id="channel-vt-upstream" class="channel-card" href="https://github.com/ValyriaTear/ValyriaTear/tree/0.6.0" rel="noopener">
+        <div>
+          <span class="project-type">Upstream project</span>
+          <div class="channel-title">ValyriaTear/ValyriaTear (0.6.0)</div>
+          <p class="channel-meta">Original open-source J-RPG repository by Bertram (Yohann Ferreira) and contributors, built on the Hero of Allacrost engine.</p>
+        </div>
+        <span class="channel-cta">Open upstream repository →</span>
+      </a>
+
+      <a id="channel-vt-fork" class="channel-card" href="https://github.com/rgoza1996/ValyriaTear" rel="noopener">
+        <div>
+          <span class="project-type">Reference fork</span>
+          <div class="channel-title">rgoza1996/ValyriaTear</div>
+          <p class="channel-meta">Public reference fork preserved on GitHub while runtime and asset-permission evaluation continues.</p>
+        </div>
+        <span class="channel-cta">Open reference fork →</span>
+      </a>
+    </div>
+  </section>
+
+  <dialog id="lightbox-valyria" class="lightbox" closedby="any" aria-labelledby="lightbox-valyria-title">
+    <div class="lightbox-header">
+      <h2 id="lightbox-valyria-title">Valyria Tear (0.6.0) · Original title screen</h2>
+      <button id="close-vt-shot" class="lightbox-close" type="button" commandfor="lightbox-valyria" command="close" autofocus>Close</button>
+    </div>
+    <div class="lightbox-stage">
+      <img src="../assets/screenshots/valyria-title.webp" alt="Original Valyria Tear title screen with mountain scenery and a floating crystal" width="800" height="600" fetchpriority="low" loading="lazy" decoding="async">
+    </div>
+    <div class="lightbox-footer">
+      <span>© Bertram, JAP, Len &amp; Allacrost · Distributed under GNU GPL v2</span>
+      <a href="../screenshot-credits/#valyria-tear">GPL 2.0, credits &amp; source archive</a>
+    </div>
+  </dialog>
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="footer-row">
+      <div><span class="footer-name">Valyria Tear Exploration</span> &nbsp;·&nbsp; Goza Games · Goza Interactive</div>
+      <div class="footer-links">
+        <a id="vt-footer-credits" href="../screenshot-credits/#valyria-tear">Screenshot credits</a>
+        <a id="vt-footer-games" href="../">Goza Games</a>
+        <a id="vt-footer-hub" href="../../">Goza Interactive</a>
+        <a id="vt-footer-email" href="mailto:rogiegoza@gmail.com">rogiegoza@gmail.com</a>
+      </div>
+    </div>
+    <p class="hosting">This website is hosted on GitHub Pages. GitHub logs visitors’ IP addresses for security purposes. See the <a href="https://docs.github.com/en/site-policy/privacy-policies/github-privacy-statement" rel="noopener">GitHub Privacy Statement</a> for details.</p>
+  </div>
+</footer>
+</body>
+</html>
