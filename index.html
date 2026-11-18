@@ -2,112 +2,339 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1">
-  <meta name="theme-color" content="#FCF9F2">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="text-scale" content="scale">
+  <meta name="color-scheme" content="light dark">
+  <script>try{const s=localStorage.getItem("color-scheme");if(s==="light"||s==="dark")document.querySelector("meta[name=\"color-scheme\"]").content=s;}catch{}</script>
+  <meta name="theme-color" media="(prefers-color-scheme: light)" content="#FCF9F2">
+  <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#151310">
+  <meta name="referrer" content="strict-origin-when-cross-origin">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'inline-speculation-rules' 'sha256-ZV62QEBcRpEGfPKCC1icWMtMogYELaRWrcXrfesczKY=' 'sha256-uQWPMl/AmgV/dy/u7p3gQcznuxxWwOHFk34Nd/Wx88U='; style-src 'self' 'unsafe-inline'; img-src 'self' data:; object-src 'none'; base-uri 'self'; form-action 'self'">
   <meta name="description" content="Goza Games creates original games, releases mods, and explores open-source game preservation under Goza Interactive.">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Goza Games | Goza Interactive">
+  <meta property="og:description" content="Original releases, game mods, autonomous-campaign prototypes, and open-source game preservation under Goza Interactive.">
+  <meta property="og:url" content="https://rgoza1996.github.io/gozagames/">
+  <meta property="og:image" content="https://rgoza1996.github.io/gozagames/assets/screenshots/storm-campaign.webp">
+  <link rel="canonical" href="https://rgoza1996.github.io/gozagames/">
+  <link rel="icon" href="./favicon.svg" type="image/svg+xml">
   <title>Goza Games | Goza Interactive</title>
   <link rel="stylesheet" href="./style.css">
+  <script type="speculationrules">{"prefetch":[{"where":{"and":[{"href_matches":"/*"},{"not":{"href_matches":"/*assets/*"}}]},"eagerness":"moderate"}]}</script>
+  <script type="module" src="./site.js"></script>
 </head>
 <body class="studio-page">
-<a class="skip" href="#main">Skip to content</a>
+<a id="skip-to-main" class="skip-link visually-hidden" href="#studio-title">Skip to content</a>
+
 <header class="site-header">
   <div class="wrap header-inner">
-    <a class="wordmark" href="./"><span class="brand-mark" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></span>Goza Games</a>
-    <nav class="header-nav" aria-label="Main">
-      <a href="#released">Released</a>
-      <a href="#development">In development</a>
-      <a href="#preservation">Preservation</a>
-      <a href="https://rgoza1996.github.io/">Goza Interactive</a>
-    </nav>
+    <a id="nav-home-wordmark" class="wordmark" href="./" aria-current="page">
+      <span class="brand-mark" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></span>
+      Goza Games
+    </a>
+    <div class="header-controls">
+      <nav class="header-nav" aria-label="Primary" data-scrollspy>
+        <a id="nav-released" href="#released">Released</a>
+        <a id="nav-development" href="#development">In development</a>
+        <a id="nav-preservation" href="#preservation">Preservation</a>
+        <a id="nav-labs" href="../gozalabs/">Goza Labs</a>
+        <a id="nav-interactive" href="../">← Goza Interactive</a>
+      </nav>
+      <button id="theme-toggle-btn" class="theme-toggle" type="button" data-theme-toggle>
+        <span class="when-light">
+          <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"/></svg>
+          <span>Dark<span class="visually-hidden"> theme</span></span>
+        </span>
+        <span class="when-dark">
+          <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2m-7.07-14.93 1.41 1.41m11.32 11.32 1.41 1.41M2 12h2m16 0h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"/></svg>
+          <span>Light<span class="visually-hidden"> theme</span></span>
+        </span>
+      </button>
+    </div>
   </div>
 </header>
 
 <main id="main" class="wrap">
   <section class="studio-hero" aria-labelledby="studio-title">
     <span class="eyebrow">A Goza Interactive division</span>
-    <h1 id="studio-title">Games, mods,<br>and worlds to explore.</h1>
+    <h1 id="studio-title" tabindex="-1">Games, mods, and worlds to explore.</h1>
     <p class="hero-description">Goza Games is the gaming side of Goza Interactive: original releases, game mods, prototypes, and carefully considered open-source preservation work.</p>
-    <div class="actions"><a class="button" href="#released">See released projects</a><a class="button secondary" href="mailto:rogiegoza@gmail.com">Get in touch</a></div>
+    <div class="actions">
+      <a id="cta-see-released" class="button" href="#released">See released projects</a>
+      <a id="cta-contact" class="button secondary" href="mailto:rogiegoza@gmail.com">Get in touch</a>
+    </div>
+    <ul class="hero-ledger" role="list" aria-label="Studio focus">
+      <li><strong>2</strong> live releases</li>
+      <li><strong>Godot 4</strong> campaign prototype in active R&amp;D</li>
+      <li><strong>Open-source</strong> runtime preservation</li>
+    </ul>
   </section>
 
-  <section id="released" class="portfolio-section" aria-labelledby="released-title">
-    <div class="portfolio-heading"><span class="eyebrow">Released</span><h2 id="released-title">Available now.</h2></div>
+  <section id="released" class="portfolio-section" aria-labelledby="released-title" tabindex="-1">
+    <div class="portfolio-heading">
+      <div>
+        <span class="eyebrow">Released</span>
+        <h2 id="released-title">Available now.</h2>
+      </div>
+      <p class="section-summary">Shipped mobile games and simulation mods maintained for Android and PC players.</p>
+    </div>
+
     <div class="project-grid">
       <article class="project-card sudoku-card">
         <figure class="project-preview">
           <div class="preview-images preview-phones">
-            <a href="assets/screenshots/sudoku-gameplay.webp" aria-label="Enlarge Sudoku gameplay screenshot"><img src="assets/screenshots/sudoku-gameplay.webp" alt="Sudoku by Rogie gameplay with a parchment puzzle board, hint button, and pencil controls" width="720" height="1280" loading="lazy" decoding="async"></a>
-            <a href="assets/screenshots/sudoku-home.webp" aria-label="Enlarge Sudoku home screen screenshot"><img src="assets/screenshots/sudoku-home.webp" alt="Sudoku by Rogie home screen with Puzzle of the Day and New Game options" width="720" height="1280" loading="lazy" decoding="async"></a>
+            <button id="open-lightbox-sudoku-gameplay" class="preview-trigger" type="button" commandfor="lightbox-sudoku-gameplay" command="show-modal" aria-label="Enlarge Sudoku gameplay screenshot">
+              <img
+                src="assets/screenshots/sudoku-gameplay.webp"
+                srcset="assets/screenshots/sudoku-gameplay-360w.webp 360w, assets/screenshots/sudoku-gameplay.webp 720w"
+                sizes="(max-width: 48em) 38vw, 150px"
+                alt="Sudoku by Rogie gameplay with a parchment puzzle board, hint button, and pencil controls"
+                width="720"
+                height="1280"
+                fetchpriority="high"
+                decoding="async">
+              <span class="zoom-chip" aria-hidden="true">Enlarge</span>
+            </button>
+            <button id="open-lightbox-sudoku-home" class="preview-trigger" type="button" commandfor="lightbox-sudoku-home" command="show-modal" aria-label="Enlarge Sudoku home screen screenshot">
+              <img
+                src="assets/screenshots/sudoku-home.webp"
+                srcset="assets/screenshots/sudoku-home-360w.webp 360w, assets/screenshots/sudoku-home.webp 720w"
+                sizes="(max-width: 48em) 38vw, 150px"
+                alt="Sudoku by Rogie home screen with Puzzle of the Day and New Game options"
+                width="720"
+                height="1280"
+                decoding="async">
+              <span class="zoom-chip" aria-hidden="true">Enlarge</span>
+            </button>
           </div>
-          <figcaption>Gameplay &amp; home screen <span>Click to enlarge</span></figcaption>
+          <figcaption>Gameplay &amp; home screen <span>Select screenshot to inspect</span></figcaption>
         </figure>
-        <span class="project-type">Android game</span>
-        <h3>Sudoku by Rogie</h3>
-        <p>Classic Sudoku in a warm, parchment-inspired space with offline puzzle generation, local saves, history, and optional rewarded hints.</p>
-        <div class="card-links"><a href="sudoku/privacy/">Privacy policy</a></div>
+        <div class="card-header">
+          <span class="project-type">Android game</span>
+          <h3><a id="card-title-sudoku" class="card-link" href="sudoku/">Sudoku by Rogie</a></h3>
+        </div>
+        <p class="card-body">Classic Sudoku in a warm, parchment-inspired space with offline puzzle generation, local saves, history, and optional rewarded hints.</p>
+        <footer class="card-links">
+          <a id="link-sudoku-page" href="sudoku/">Project page<span class="visually-hidden"> for Sudoku by Rogie</span></a>
+          <a id="link-sudoku-privacy" href="sudoku/privacy/">Privacy policy<span class="visually-hidden"> for Sudoku by Rogie</span></a>
+        </footer>
       </article>
 
       <article class="project-card">
         <figure class="project-preview">
           <div class="preview-images preview-landscape">
-            <a href="assets/screenshots/nobles-nexus-thumbnail.webp" aria-label="Enlarge Nobles Buy Stuff Nexus Mods thumbnail"><img src="assets/screenshots/nobles-nexus-thumbnail.webp" alt="Nobles Buy Stuff Nexus Mods artwork showing a noble inspecting a sword at a town market" width="1300" height="372" loading="lazy" decoding="async"></a>
+            <button id="open-lightbox-nobles" class="preview-trigger" type="button" commandfor="lightbox-nobles" command="show-modal" aria-label="Enlarge Nobles Buy Stuff Nexus Mods thumbnail">
+              <img
+                src="assets/screenshots/nobles-nexus-thumbnail.webp"
+                srcset="assets/screenshots/nobles-nexus-thumbnail-650w.webp 650w, assets/screenshots/nobles-nexus-thumbnail.webp 1300w"
+                sizes="(max-width: 48em) 92vw, 520px"
+                alt="Nobles Buy Stuff Nexus Mods artwork showing a noble inspecting a sword at a town market"
+                width="1300"
+                height="372"
+                fetchpriority="high"
+                decoding="async">
+              <span class="zoom-chip" aria-hidden="true">Enlarge</span>
+            </button>
           </div>
-          <figcaption>Nexus Mods preview <span>Click to enlarge</span></figcaption>
+          <figcaption>Nexus Mods preview <span>Select screenshot to inspect</span></figcaption>
         </figure>
-        <span class="project-type">Mount &amp; Blade II: Bannerlord mod</span>
-        <h3>Nobles Buy Stuff</h3>
-        <p>AI lords, mercenary captains, party heroes, and player-clan leaders can buy and sell equipment when they visit towns, using live market stock, culture, skills, role, budget, and current gear.</p>
-        <div class="card-links">
-          <a href="https://www.nexusmods.com/mountandblade2bannerlord/mods/12366">Nexus Mods</a>
-          <a href="https://steamcommunity.com/workshop/browse/?appid=261550&amp;searchtext=Nobles+Buy+Stuff&amp;browsesort=textsearch&amp;section=readytouseitems">Steam Workshop</a>
+        <div class="card-header">
+          <span class="project-type">Mount &amp; Blade II: Bannerlord mod</span>
+          <h3><a id="card-title-nobles" class="card-link" href="nobles-buy-stuff/">Nobles Buy Stuff</a></h3>
+        </div>
+        <p class="card-body">AI lords, mercenary captains, party heroes, and player-clan leaders can buy and sell equipment when they visit towns, using live market stock, culture, skills, role, budget, and current gear.</p>
+        <footer class="card-links">
+          <a id="link-nobles-page" href="nobles-buy-stuff/">Project page<span class="visually-hidden"> for Nobles Buy Stuff</span></a>
+          <a id="link-nobles-nexus" href="https://www.nexusmods.com/mountandblade2bannerlord/mods/12366" rel="noopener">Nexus Mods</a>
+          <a id="link-nobles-steam" href="https://steamcommunity.com/sharedfiles/filedetails/?id=3784629621" rel="noopener">Steam Workshop</a>
+        </footer>
+      </article>
+    </div>
+  </section>
+
+  <section id="development" class="portfolio-section" aria-labelledby="development-title" tabindex="-1">
+    <div class="portfolio-heading">
+      <div>
+        <span class="eyebrow">In development</span>
+        <h2 id="development-title">Building next.</h2>
+      </div>
+      <p class="section-summary">Long-horizon simulation and action-RPG prototypes built in Godot 4.</p>
+    </div>
+    <div class="wide-card-shell">
+      <article class="wide-card storm-card">
+        <figure class="project-preview">
+          <div class="preview-images preview-landscape">
+            <button id="open-lightbox-storm" class="preview-trigger" type="button" commandfor="lightbox-storm" command="show-modal" aria-label="Enlarge Storm campaign prototype screenshot">
+              <img
+                src="assets/screenshots/storm-campaign.webp"
+                srcset="assets/screenshots/storm-campaign-640w.webp 640w, assets/screenshots/storm-campaign-960w.webp 960w, assets/screenshots/storm-campaign.webp 1280w"
+                sizes="(max-width: 54em) 92vw, 560px"
+                alt="Storm prototype campaign showing the player wizard and an Imperial company in Keep District"
+                width="1280"
+                height="720"
+                loading="lazy"
+                decoding="async">
+              <span class="zoom-chip" aria-hidden="true">Enlarge</span>
+            </button>
+          </div>
+          <figcaption>Campaign prototype <span>Select screenshot to inspect</span></figcaption>
+        </figure>
+        <div class="wide-card-copy">
+          <span class="project-type">Godot 4 action-RPG prototype</span>
+          <h3><a id="card-title-storm" class="card-link" href="storm/">Storm</a></h3>
+          <p>An autonomous-campaign action RPG focused on living factions, explorable regions, mercenary companies, and large-scale battles. Development is ongoing.</p>
+          <span class="status-pill">Active playtest prototype · Keep District</span>
+          <footer class="card-links">
+            <a id="link-storm-page" href="storm/">Project page<span class="visually-hidden"> for Storm</span></a>
+          </footer>
         </div>
       </article>
     </div>
   </section>
 
-  <section id="development" class="portfolio-section" aria-labelledby="development-title">
-    <div class="portfolio-heading"><span class="eyebrow">In development</span><h2 id="development-title">Building next.</h2></div>
-    <article class="wide-card storm-card">
-      <figure class="project-preview">
-          <div class="preview-images preview-landscape">
-            <a href="assets/screenshots/storm-campaign.webp" aria-label="Enlarge Campaign prototype"><img src="assets/screenshots/storm-campaign.webp" alt="Storm prototype campaign showing the player wizard and an Imperial company in Keep District" width="1280" height="720" loading="lazy" decoding="async"></a>
-          </div>
-          <figcaption>Campaign prototype <span>Click to enlarge</span></figcaption>
-        </figure>
+  <section id="preservation" class="portfolio-section" aria-labelledby="preservation-title" tabindex="-1">
+    <div class="portfolio-heading">
       <div>
-        <span class="project-type">Godot 4 action-RPG prototype</span>
-        <h3>Storm</h3>
-        <p>An autonomous-campaign action RPG focused on living factions, explorable regions, mercenary companies, and large-scale battles. Development is ongoing.</p>
+        <span class="eyebrow">Research &amp; preservation</span>
+        <h2 id="preservation-title">Older games, modern runtimes.</h2>
       </div>
-    </article>
-  </section>
-
-  <section id="preservation" class="portfolio-section" aria-labelledby="preservation-title">
-    <div class="portfolio-heading"><span class="eyebrow">Research &amp; preservation</span><h2 id="preservation-title">Older games, modern runtimes.</h2></div>
-    <div class="project-grid compact">
+      <p class="section-summary">Evaluating faithful open-source ports with transparent asset-license verification.</p>
+    </div>
+    <div class="project-grid single-feature">
       <article class="project-card">
         <figure class="project-preview">
           <div class="preview-images preview-landscape">
-            <a href="assets/screenshots/valyria-title.webp" aria-label="Enlarge Original game · Title screen"><img src="assets/screenshots/valyria-title.webp" alt="Original Valyria Tear title screen with mountain scenery and a floating crystal" width="800" height="600" loading="lazy" decoding="async"></a>
+            <button id="open-lightbox-valyria" class="preview-trigger" type="button" commandfor="lightbox-valyria" command="show-modal" aria-label="Enlarge Valyria Tear original title screen screenshot">
+              <img
+                src="assets/screenshots/valyria-title.webp"
+                alt="Original Valyria Tear title screen with mountain scenery and a floating crystal"
+                width="800"
+                height="600"
+                loading="lazy"
+                decoding="async">
+              <span class="zoom-chip" aria-hidden="true">Enlarge</span>
+            </button>
           </div>
-          <figcaption>Original game · Title screen <span>Click to enlarge</span></figcaption>
+          <figcaption>Original game · Title screen <span>Select screenshot to inspect</span></figcaption>
         </figure>
-        <p class="preview-credit">© Bertram, JAP, Len &amp; Allacrost · <a href="screenshot-credits/#valyria-tear">GPL 2.0, credits &amp; source</a></p>
-        <span class="project-type">Exploration</span><h3>Valyria Tear</h3><p>Evaluating an open-source Godot reimplementation and modern web/Android targets. Permission review is in progress before public distribution.</p></article>
+        <div class="card-header">
+          <span class="project-type">Exploration</span>
+          <h3><a id="card-title-valyria" class="card-link" href="valyria-tear/">Valyria Tear</a></h3>
+        </div>
+        <div>
+          <p class="preview-credit">© Bertram, JAP, Len &amp; Allacrost · <a id="link-valyria-credits" href="screenshot-credits/#valyria-tear">GPL 2.0, credits &amp; source</a></p>
+          <p class="card-body">Evaluating an open-source Godot reimplementation and modern web/Android targets. Permission review is in progress before public distribution.</p>
+        </div>
+        <footer class="card-links">
+          <a id="link-valyria-page" href="valyria-tear/">Project page<span class="visually-hidden"> for Valyria Tear</span></a>
+          <a id="link-valyria-license-details" href="screenshot-credits/#valyria-tear">View license &amp; source archive</a>
+        </footer>
+      </article>
     </div>
   </section>
 
   <section id="privacy" class="details-grid" aria-label="Information and support">
-    <div><span class="detail-index">01</span><h2>Privacy, by game</h2><p>Privacy information is specific to each release and platform. The current <a href="sudoku/privacy/">Sudoku by Rogie policy</a> covers its Android app.</p></div>
-    <div><span class="detail-index">02</span><h2>Part of Goza Interactive</h2><p>Goza Games handles gaming projects. AI, software, and experimental technology live under <a href="https://rgoza1996.github.io/gozalabs/">Goza Labs</a>.</p></div>
-    <div><span class="detail-index">03</span><h2>Contact</h2><p>Questions about a Goza Games project? Email <a href="mailto:rogiegoza@gmail.com">rogiegoza@gmail.com</a> and include the project and platform.</p></div>
+    <div>
+      <span class="detail-index">01</span>
+      <h2>Privacy, by game</h2>
+      <p>Privacy information is specific to each release and platform. The current <a id="detail-link-sudoku-privacy" href="sudoku/privacy/">Sudoku by Rogie policy</a> covers its Android app.</p>
+    </div>
+    <div>
+      <span class="detail-index">02</span>
+      <h2>Part of Goza Interactive</h2>
+      <p>Goza Games handles gaming projects. AI, software, and experimental technology live under <a id="detail-link-gozalabs" href="../gozalabs/">Goza Labs</a>.</p>
+    </div>
+    <div>
+      <span class="detail-index">03</span>
+      <h2>Contact</h2>
+      <p>Questions about a Goza Games project? Email <a id="detail-link-email" href="mailto:rogiegoza@gmail.com">rogiegoza@gmail.com</a> and include the project and platform.</p>
+    </div>
   </section>
+
+  <!-- Native Top-Layer Modal Lightboxes (<dialog closedby="any">) -->
+  <dialog id="lightbox-sudoku-gameplay" class="lightbox lightbox-portrait" closedby="any" aria-labelledby="lightbox-sudoku-gameplay-title">
+    <div class="lightbox-header">
+      <h2 id="lightbox-sudoku-gameplay-title">Sudoku by Rogie · Gameplay</h2>
+      <button id="close-lightbox-sudoku-gameplay" class="lightbox-close" type="button" commandfor="lightbox-sudoku-gameplay" command="close" autofocus>Close</button>
+    </div>
+    <div class="lightbox-stage">
+      <img src="assets/screenshots/sudoku-gameplay.webp" alt="Sudoku by Rogie gameplay with a parchment puzzle board, hint button, and pencil controls" width="720" height="1280" fetchpriority="low" loading="lazy" decoding="async">
+    </div>
+    <div class="lightbox-footer">
+      <span>Android store-listing capture · 720 × 1280</span>
+      <a href="assets/screenshots/sudoku-gameplay.webp" target="_blank" rel="noopener">Open full image</a>
+    </div>
+  </dialog>
+
+  <dialog id="lightbox-sudoku-home" class="lightbox lightbox-portrait" closedby="any" aria-labelledby="lightbox-sudoku-home-title">
+    <div class="lightbox-header">
+      <h2 id="lightbox-sudoku-home-title">Sudoku by Rogie · Home screen</h2>
+      <button id="close-lightbox-sudoku-home" class="lightbox-close" type="button" commandfor="lightbox-sudoku-home" command="close" autofocus>Close</button>
+    </div>
+    <div class="lightbox-stage">
+      <img src="assets/screenshots/sudoku-home.webp" alt="Sudoku by Rogie home screen with Puzzle of the Day and New Game options" width="720" height="1280" fetchpriority="low" loading="lazy" decoding="async">
+    </div>
+    <div class="lightbox-footer">
+      <span>Android store-listing capture · 720 × 1280</span>
+      <a href="assets/screenshots/sudoku-home.webp" target="_blank" rel="noopener">Open full image</a>
+    </div>
+  </dialog>
+
+  <dialog id="lightbox-nobles" class="lightbox" closedby="any" aria-labelledby="lightbox-nobles-title">
+    <div class="lightbox-header">
+      <h2 id="lightbox-nobles-title">Nobles Buy Stuff · Nexus Mods artwork</h2>
+      <button id="close-lightbox-nobles" class="lightbox-close" type="button" commandfor="lightbox-nobles" command="close" autofocus>Close</button>
+    </div>
+    <div class="lightbox-stage">
+      <img src="assets/screenshots/nobles-nexus-thumbnail.webp" alt="Nobles Buy Stuff Nexus Mods artwork showing a noble inspecting a sword at a town market" width="1300" height="372" fetchpriority="low" loading="lazy" decoding="async">
+    </div>
+    <div class="lightbox-footer">
+      <span>Mount &amp; Blade II: Bannerlord mod listing header</span>
+      <a href="https://www.nexusmods.com/mountandblade2bannerlord/mods/12366" rel="noopener">View on Nexus Mods</a>
+    </div>
+  </dialog>
+
+  <dialog id="lightbox-storm" class="lightbox" closedby="any" aria-labelledby="lightbox-storm-title">
+    <div class="lightbox-header">
+      <h2 id="lightbox-storm-title">Storm · Campaign prototype</h2>
+      <button id="close-lightbox-storm" class="lightbox-close" type="button" commandfor="lightbox-storm" command="close" autofocus>Close</button>
+    </div>
+    <div class="lightbox-stage">
+      <img src="assets/screenshots/storm-campaign.webp" alt="Storm prototype campaign showing the player wizard and an Imperial company in Keep District" width="1280" height="720" fetchpriority="low" loading="lazy" decoding="async">
+    </div>
+    <div class="lightbox-footer">
+      <span>Godot 4 playtest capture (October 5, 2026) · Prototype visuals may change</span>
+      <a href="screenshot-credits/#storm">Capture notes</a>
+    </div>
+  </dialog>
+
+  <dialog id="lightbox-valyria" class="lightbox" closedby="any" aria-labelledby="lightbox-valyria-title">
+    <div class="lightbox-header">
+      <h2 id="lightbox-valyria-title">Valyria Tear (0.6.0) · Original title screen</h2>
+      <button id="close-lightbox-valyria" class="lightbox-close" type="button" commandfor="lightbox-valyria" command="close" autofocus>Close</button>
+    </div>
+    <div class="lightbox-stage">
+      <img src="assets/screenshots/valyria-title.webp" alt="Original Valyria Tear title screen with mountain scenery and a floating crystal" width="800" height="600" fetchpriority="low" loading="lazy" decoding="async">
+    </div>
+    <div class="lightbox-footer">
+      <span>© Bertram, JAP, Len &amp; Allacrost · Distributed under GNU GPL v2</span>
+      <a href="screenshot-credits/#valyria-tear">GPL 2.0, credits &amp; source archive</a>
+    </div>
+  </dialog>
 </main>
 
 <footer class="site-footer">
   <div class="wrap">
-    <div class="footer-row"><div><span class="footer-name">Goza Games</span> &nbsp; · &nbsp; A Goza Interactive division</div><div><a href="https://rgoza1996.github.io/">Goza Interactive</a> &nbsp; · &nbsp; <a href="https://rgoza1996.github.io/gozalabs/">Goza Labs</a> &nbsp; · &nbsp; <a href="mailto:rogiegoza@gmail.com">rogiegoza@gmail.com</a></div></div>
-    <p class="hosting">This website is hosted on GitHub Pages. GitHub logs visitors’ IP addresses for security purposes. See the <a href="https://docs.github.com/en/site-policy/privacy-policies/github-privacy-statement">GitHub Privacy Statement</a> for details.</p>
+    <div class="footer-row">
+      <div><span class="footer-name">Goza Games</span> &nbsp;·&nbsp; A Goza Interactive division</div>
+      <div class="footer-links">
+        <a id="footer-interactive" href="../">Goza Interactive</a>
+        <a id="footer-labs" href="../gozalabs/">Goza Labs</a>
+        <a id="footer-credits" href="screenshot-credits/">Screenshot credits</a>
+        <a id="footer-email" href="mailto:rogiegoza@gmail.com">rogiegoza@gmail.com</a>
+      </div>
+    </div>
+    <p class="hosting">This website is hosted on GitHub Pages. GitHub logs visitors’ IP addresses for security purposes. See the <a id="footer-gh-privacy" href="https://docs.github.com/en/site-policy/privacy-policies/github-privacy-statement" rel="noopener">GitHub Privacy Statement</a> for details.</p>
   </div>
 </footer>
 </body>

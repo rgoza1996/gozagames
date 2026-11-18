@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
+  <style>
+    rect.frame { fill: #FCF9F2; stroke: #865519; stroke-width: 2; }
+    rect.dot { fill: #865519; }
+    @media (prefers-color-scheme: dark) {
+      rect.frame { fill: #171411; stroke: #E2B06D; }
+      rect.dot { fill: #E2B06D; }
+    }
+  </style>
+  <rect class="frame" x="2" y="2" width="28" height="28" rx="7" />
+  <rect class="dot" x="7.5" y="7.5" width="3.6" height="3.6" rx="0.9" />
+  <rect class="dot" x="14.2" y="7.5" width="3.6" height="3.6" rx="0.9" />
+  <rect class="dot" x="20.9" y="7.5" width="3.6" height="3.6" rx="0.9" />
+  <rect class="dot" x="7.5" y="14.2" width="3.6" height="3.6" rx="0.9" />
+  <rect class="dot" x="14.2" y="14.2" width="3.6" height="3.6" rx="0.9" />
+  <rect class="dot" x="20.9" y="14.2" width="3.6" height="3.6" rx="0.9" />
+  <rect class="dot" x="7.5" y="20.9" width="3.6" height="3.6" rx="0.9" />
+  <rect class="dot" x="14.2" y="20.9" width="3.6" height="3.6" rx="0.9" />
+  <rect class="dot" x="20.9" y="20.9" width="3.6" height="3.6" rx="0.9" />
+</svg>

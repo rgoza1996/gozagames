@@ -8,9 +8,14 @@ The site covers released games and mods, projects in development, game-preservat
 
 GitHub Pages serves the `main` branch from the repository root.
 
-- Homepage: `index.html`
+- Division index: `index.html`
+- Sudoku by Rogie: `sudoku/index.html`
 - Sudoku by Rogie privacy policy: `sudoku/privacy/index.html`
-- Shared site theme: `style.css`
+- Nobles Buy Stuff: `nobles-buy-stuff/index.html`
+- Storm: `storm/index.html`
+- Valyria Tear runtime evaluation: `valyria-tear/index.html`
+- Screenshot & license credits: `screenshot-credits/index.html`
+- Shared theme & progressive enhancements: `style.css`, `site.js`, `404.html`
 
 The Android application source and private game/mod development repositories are maintained separately and are not published by this website.
 
